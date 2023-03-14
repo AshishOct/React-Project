@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+    #IndexIgnore *
+    <IfModule mod_negotiation.c>
+        Options -Indexes +FollowSymLinks
+        #Options -MultiViews
+    </IfModule>
+
+    <IfModule mod_headers.c>
+        Header always set Date "Baryons"
+        Header always set Last-Modified "Baryons"
+        Header always set Cache-Control "no-cache, no-store, must-revalidate"
+        Header always edit Set-Cookie (.*) "$1; Secure"
+        Header always set Server "Baryons"
+        Header always set ServerTokens "Prod"
+        Header always set ServerSignature "Off"
+        Header always set X-Powered-By "Baryons"
+        Header set X-XSS-Protection "1; mode=block"
+    </IfModule>
+
+    #Force SSL
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.html [QSA,L]
+</IfModule>
