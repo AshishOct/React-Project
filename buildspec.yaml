@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+       - npm install --legacy-peer-deps
+       - npm run build
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'build'
+  name: myname-$(date +%b_%d_%Y_%H_%M)
