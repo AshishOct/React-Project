@@ -5,7 +5,7 @@ phases:
     commands:
        - npm install --legacy-peer-deps
        - npm run build
-  artifacts:
-    base-directory: outputDirectory
-    files:
-      - '**/*'
+artifacts:
+  base-directory: build
+  files:
+    - '**/*'
