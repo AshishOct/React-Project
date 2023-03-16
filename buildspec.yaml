@@ -7,10 +7,12 @@ phases:
        - npm run build
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'build'
+    - appspec.yml
+  discard-paths: yes  
   secondary-artifacts:
     artifact1:
       files:
-        - appspec.yml
+        - '**/*'
+      base-directory: 'build' 
+      discard-paths: yes
     
