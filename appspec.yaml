@@ -1,15 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html
+  - source: /appspec.yaml
+    destination: /home/
     overwrite: true
 
 permissions:
-  - object: /var/www/html
+  - object: /home/
     pattern: "**"
-    owner: apache
-    group: apache
+    owner: root
+    group: root
     mode: 775
     type:
       - directory
