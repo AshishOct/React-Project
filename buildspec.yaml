@@ -8,5 +8,5 @@ phases:
 artifacts:
   files:
     - appspec.yml
-    - build/**/*
+    - build/*
   discard-paths: yes
