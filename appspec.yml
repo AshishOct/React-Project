@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/
+    destination: /var/www/html
     overwrite: true
 
 permissions:
-  - object: /home/
+  - object: /var/www/html
     pattern: "**"
     owner: root
     group: root
