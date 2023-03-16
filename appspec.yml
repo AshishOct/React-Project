@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /appspec.yml
+  - source: /
     destination: /home/
     overwrite: true
 
