@@ -5,7 +5,10 @@ phases:
     commands:
        - npm install --legacy-peer-deps
        - npm run build
+  post_build:
+     commands:
+        - cp -r appspec.yml build
 artifacts:
   files:
-    - appspec.yml
-    - build/**/*
+    - '**/*'
+  base-directory: 'build'
