@@ -13,6 +13,5 @@ artifacts:
     artifact1:
       files:
         - '**/*'
-      base-directory: 'build' 
-      discard-paths: yes
+      base-directory: 'build'
     
