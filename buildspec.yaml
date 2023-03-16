@@ -8,5 +8,6 @@ phases:
 artifacts:
   base-directory: build
   files:
+    - build/**/*
     - appspec.yaml
-    - '**/*'
+    
