@@ -8,5 +8,6 @@ phases:
 artifacts:
   files:
     - build/**/*
+    - appspec.yml
     
     
