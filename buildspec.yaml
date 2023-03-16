@@ -6,7 +6,6 @@ phases:
        - npm install --legacy-peer-deps
        - npm run build
 artifacts:
-  base-directory: build
   files:
     - build/**/*
     - appspec.yaml
