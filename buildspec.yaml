@@ -8,7 +8,9 @@ phases:
 artifacts:
   files:
     - '**/*'
-    - appspec.yml
   base-directory: 'build'
-    
+  secondary-artifacts:
+    artifact1:
+      files:
+        - appspec.yml
     
