@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+    overwrite: true
+
+permissions:
+  - object: /var/www/html
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 775
+    type:
+      - directory
+      - file
+
+hooks:
+  BeforeInstall:
+    - cd /home/devaffiliate.prestigelabsaffs/backups
+    - tar cvfz "devaffiliate_prestigelabsaffs_com_Build_$(date '+%b_%d_%Y_%H_%M').tar.gz" /home/devaffiliate.prestigelabsaffs/public_html
+    - rm -rf /home/devaffiliate.prestigelabsaffs/public_html/*
+    - rm -rf /home/devaffiliate.prestigelabsaffs/public_html/.htaccess
+
+  AfterInstall:
+
+  ApplicationStop:
