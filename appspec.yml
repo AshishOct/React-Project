@@ -17,10 +17,7 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - cd /home/devaffiliate.prestigelabsaffs/backups
-    - tar cvfz "devaffiliate_prestigelabsaffs_com_Build_$(date '+%b_%d_%Y_%H_%M').tar.gz" /home/devaffiliate.prestigelabsaffs/public_html
-    - rm -rf /home/devaffiliate.prestigelabsaffs/public_html/*
-    - rm -rf /home/devaffiliate.prestigelabsaffs/public_html/.htaccess
+    - location: tar cvfz "devaffiliate_prestigelabsaffs_com_Build_$(date '+%b_%d_%Y_%H_%M').tar.gz" /home/devaffiliate.prestigelabsaffs/public_html
 
   AfterInstall:
 
