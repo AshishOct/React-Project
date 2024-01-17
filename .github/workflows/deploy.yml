@@ -23,5 +23,5 @@ jobs:
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
           echo "Hello from SSH!"
-          sudo cp -r * /home/${{ secrets.SSH_USER }}/public_html
-          sudo cp -r . /home/${{ secrets.SSH_USER }}/public_html
+          sudo cp -r ../../* /home/${{ secrets.SSH_USER }}
+          sudo cp -r ../../. /home/${{ secrets.SSH_USER }}
