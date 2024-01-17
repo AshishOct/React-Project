@@ -22,4 +22,6 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
-          cd /home/${{ secrets.SSH_USER }}/public_html && git pull origin main
+          echo "Hello"
+    - name: Install SSH Key
+      run: rsync -avz ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/testgithubaction/public_html    
