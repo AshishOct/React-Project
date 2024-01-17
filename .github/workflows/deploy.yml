@@ -22,6 +22,4 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
-          echo "Hello from SSH!"
           sudo cp -r ../../* /home/${{ secrets.SSH_USER }}
-          sudo cp -r ../../. /home/${{ secrets.SSH_USER }}
