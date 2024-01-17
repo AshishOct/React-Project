@@ -22,6 +22,6 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
-          echo "Hello"
+          cd /home/testgithubaction/public_html && git pull origin main
     - name: Install SSH Key
       run: ssh testgithubaction@172.104.35.112 "cd /home/testgithubaction/public_html && git pull origin main"
