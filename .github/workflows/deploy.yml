@@ -24,4 +24,4 @@ jobs:
         script: |
           echo "Hello"
     - name: Install SSH Key
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home/testgithubaction/public_html && git pull origin main"
+      run: ssh testgithubaction@172.104.35.112 "cd /home/testgithubaction/public_html && git pull origin main"
