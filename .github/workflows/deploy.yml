@@ -22,4 +22,4 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
-          sudo cp -r ../../* /home/${{ secrets.SSH_USER }}
+          cd /home/${{ secrets.SSH_USER }}/public_html && git pull origin main
